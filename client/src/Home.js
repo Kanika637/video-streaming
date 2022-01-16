@@ -1,3 +1,5 @@
+// this will contain the list of video which are availible
+
 import React ,{Component} from "react"
 import {Link} from "react-router-dom";
 
@@ -13,6 +15,8 @@ export default class Home extends Component{
         try{
             const response=await fetch('http://localhost:4000/videos');
             const data=await response.json();
+
+            //initializing a array of videos
             this.setState({videos:[...data]});
         }
         catch(error){
@@ -29,6 +33,8 @@ export default class Home extends Component{
                             <div className="col-md-4" key={video.id}>
                                 <Link to={`/player/${video.id}`}>
                                     <div className="card border-0">
+
+                                        {/* thumbnail for the video */}
                                         <img src={`http://localhost:4000${video.poster}`} alt={video.name}/>
                                         <div className="card-body">
                                             <p>{video.name}</p>
