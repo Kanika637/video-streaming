@@ -1,6 +1,4 @@
 // this is a kind of player where all the videos will be played
-
-
 import React,{Component} from "react"
 
 export default class Player extends Component{

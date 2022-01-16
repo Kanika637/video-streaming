@@ -1,5 +1,4 @@
 // this will contain the list of video which are availible
-
 import React ,{Component} from "react"
 import {Link} from "react-router-dom";
 
@@ -44,7 +43,8 @@ export default class Home extends Component{
                                 </div>
                             </Link>
                             
-                            </div>)}
+                            </div>
+                            )}
 
                     </div>
                 </div>
